@@ -547,7 +547,7 @@ function setResponse(aktYeelight, result) {
                 }
             }
             if (!(result[1] === "")) {
-                adapter.setState(sid + '.active_bright', result[1], true);
+                adapter.setState(sid + '.active_bright', Number(result[1]), true);
             }
             if (!(result[2] === "")) {
                 adapter.setState(sid + '.rgb', dec2hex(result[2]), true);
@@ -565,7 +565,7 @@ function setResponse(aktYeelight, result) {
                 }
             }
             if (!(result[4] === "")) {
-                adapter.setState(sid + '.ct', result[4], true);
+                adapter.setState(sid + '.ct', Number(result[4]), true);
             }
         } else {
             adapter.log.warn('EMPTY RESPONSE');
